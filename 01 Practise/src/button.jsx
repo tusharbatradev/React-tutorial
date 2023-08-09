@@ -1,4 +1,4 @@
-function Button(){
-    return <button className='BTN'>BUY NOW</button>
+function Button(prop){
+    return <button className='BTN'>BUY {prop.title} NOW</button>
 }
 export default Button

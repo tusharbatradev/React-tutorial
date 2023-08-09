@@ -13,12 +13,12 @@ function Mobile(prop) {
 
       <div className='block'>
       
-      <h2>{prop.name}</h2>
+      {/* <h2>{prop.name}</h2> */}
       <img width={200} src= {prop.img} alt="" />
       <p> {prop.price}</p>
       <p>{prop.GB}</p>
       <p>{prop.camera}</p>
-      <Button/>
+      <Button title={prop.name}/>
 
       </div>
   
