@@ -25,7 +25,6 @@ a:hover {
 
 body {
   margin: 0;
-  margin-top: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,11 +57,21 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.container{
+  display: flex;
+  gap: 80px;
+}
+.block{
+  display: flex;
+  flex-direction: column;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+ 
   a:hover {
     color: #747bff;
   }
@@ -77,4 +86,6 @@ button:focus-visible {
     background-color: #fcd200;
     color: blue;
   }
+
+  
 }

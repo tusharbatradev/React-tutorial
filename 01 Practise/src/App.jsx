@@ -2,33 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Button from './button'
 
 
 
-function App() {
-  const [count, setCount] = useState(0)
-  let date = "07-08-2023"
-  let product = {
-    name : "Apple Iphone 12" ,
-    price : 60000 ,
-    GB : "128GB" ,
-    colour : "White" ,
-    camera : "12-MP"
-  }
+function Mobile(prop) {
+  
   
   return (
 
-      <>
-      <h2>{product.name}</h2>
-      <img width={300} src="https://images.hindustantimes.com/tech/htmobile4/P34241/images/Design/136139-v4-apple-iphone-12-mobile-phone-large-3.jpg" alt="" />
+      <div className='block'>
       
-      <p>Price of Iphone 12 :-  {product.price}</p>
-      <p>Storage of Iphone 12:- {product.GB}</p>
-      <p>Camera of Iphone 12 :- {product.camera}</p>
-      
-      </>
-    
+      <h2>{prop.name}</h2>
+      <img width={200} src= {prop.img} alt="" />
+      <p> {prop.price}</p>
+      <p>{prop.GB}</p>
+      <p>{prop.camera}</p>
+      <Button/>
+
+      </div>
+  
   )
 }
 
-export default App
+export default Mobile
