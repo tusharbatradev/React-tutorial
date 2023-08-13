@@ -6,23 +6,19 @@ import Button from './button'
 
 
 
-function Mobile(prop) {
+function Counter(prop) {
+  
+  const [count, setCount] = useState(0);
   
   
   return (
-
-      <div className='block'>
-      
-      {/* <h2>{prop.name}</h2> */}
-      <img width={200} src= {prop.img} alt="" />
-      <p> {prop.price}</p>
-      <p>{prop.GB}</p>
-      <p>{prop.camera}</p>
-      <Button title={prop.name}/>
-
-      </div>
-  
-  )
+    <div className='block'>
+   <p className='value'>{count}</p>
+      <button onClick={() => setCount((count) => count + 1)} className="button">Increment</button>
+      <button onClick={() => setCount((count) => count - 1)} className="button">Decrement</button>
+  <button onClick={() => setCount(0)} className="button">Reset</button>
+    </div>
+  );
 }
 
-export default Mobile
+export default Counter
